@@ -20,7 +20,7 @@
     <nav class="nav_bar nav-extended">
         <div class="nav-wrapper #ffffff white row">
             <div class="col s6 m4 l2">
-                <a href="{% url 'home' %}" class="hoverable logo_img">
+                <a href="{% url 'home' %}" class="logo_img">
                     <img class="responsive-img" src="{% static 'img/manchester_logo.jpg' %}" alt="University Logo"/>
                 </a>
             </div>
@@ -29,19 +29,19 @@
                     <i class="material-icons black-text darken-2 menu_icon light">menu</i>
                 </a>
                 <ul id="nav-mobile" class="right nav_active hide-on-med-and-down large_nav">
-                    <li class="nav_link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                    <li class="nav_link {% if request.resolver_match.url_name == 'home' %}my_active{% endif %}">
                         <a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a>
                     </li>
                     &nbsp&nbsp
-                    <li class="nav_link {% if request.resolver_match.url_name == 'about_us' %}active{% endif %}">
+                    <li class="nav_link {% if request.resolver_match.url_name == 'about_us' %}my_active{% endif %}">
                         <a class="grey-text text-darken-4" href="{% url 'about_us:about_us' %}">About Us</a>
                     </li>
                     &nbsp&nbsp
-                    <li class="nav_link {% if request.resolver_match.url_name == 'events' %}active{% endif %}">
+                    <li class="nav_link {% if request.resolver_match.url_name == 'events' %}my_active{% endif %}">
                         <a class="grey-text text-darken-4" href="{% url 'events:events' %}">Events</a>
                     </li>
                     &nbsp&nbsp
-                    <li class="nav_link {% if request.resolver_match.url_name == 'membership' %}active{% endif %}">
+                    <li class="nav_link {% if request.resolver_match.url_name == 'membership' %}my_active{% endif %}">
                         <a class="grey-text text-darken-4" href="{% url 'membership:membership' %}">Membership</a>
                     </li>
                 </ul>
@@ -50,16 +50,16 @@
     </nav>
 </div>
 <ul class="side-nav z-depth-3 side_navigation" id="slide-out">
-    <li class="nav_link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+    <li class="nav_link {% if request.resolver_match.url_name == 'home' %}my_active{% endif %}">
         <a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a>
     </li>
-    <li class="nav_link {% if request.resolver_match.url_name == 'about_us' %}active{% endif %}">
+    <li class="nav_link {% if request.resolver_match.url_name == 'about_us' %}my_active{% endif %}">
         <a class="grey-text text-darken-4" href="{% url 'about_us:about_us' %}">About Us</a>
     </li>
-    <li class="nav_link {% if request.resolver_match.url_name == 'events' %}active{% endif %}">
+    <li class="nav_link {% if request.resolver_match.url_name == 'events' %}my_active{% endif %}">
         <a class="grey-text text-darken-4" href="{% url 'events:events' %}">Events</a>
     </li>
-    <li class="nav_link {% if request.resolver_match.url_name == 'membership' %}active{% endif %}">
+    <li class="nav_link {% if request.resolver_match.url_name == 'membership' %}my_active{% endif %}">
         <a class="grey-text text-darken-4" href="{% url 'membership:membership' %}">Membership</a>
     </li>
 </ul>
@@ -83,6 +83,11 @@
                             Check out the University of Manchester
                         </a>
                     </li>
+                    <li>
+                        <a class="grey-text text-lighten-1 light" href="https://www.manchester.ac.uk/connect/alumni/" target="_blank">
+                            Check out the Alumni Association of the University of Manchester
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="col m6 s12 section">
@@ -94,8 +99,11 @@
         </div>
     </div>
     <div class="footer-copyright">
-        <div class="container grey-text">
-            Copyright © 2018 University of Manchester Alumni Association of Uganda. All Rights Reserved
+        <div class="container">
+            <div class="grey-text">
+                Copyright © 2018 University of Manchester Alumni Association of Uganda. All Rights Reserved
+                {#            <img src="{% static 'img/uganda_flag.png' %}" class="responsive-img right-align">#}
+            </div>
         </div>
     </div>
 </footer>
@@ -107,6 +115,7 @@
     $(document).ready(function () {
         $('.tooltipped').tooltip({delay: 50});
         $(".button-collapse").sideNav();
+        Materialize.updateTextFields();
     });
 
 </script>

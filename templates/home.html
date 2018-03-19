@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
+{% load static from staticfiles %}
 
-{#{% load static from staticfiles %}#}
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +26,8 @@
             <div class="row">
                 <div class="col s12 m4">
                     <div class="card z-depth-5 hoverable">
-                        <div class="card-image">
-                            <img class="event_img responsive-img" src="{% static 'img/event_two.jpg' %}"/>
+                        <div class="card-image card_img">
+                            <img class="responsive-img" src="{% static 'img/event_two.jpg' %}"/>
                             <span class="card-title">Card Title</span>
                         </div>
                         <div class="card-content">
@@ -43,8 +42,8 @@
                 </div>
                 <div class="col s12 m4">
                     <div class="card z-depth-5 hoverable">
-                        <div class="card-image">
-                            <img class="event_img" src="{% static 'img/event_one.jpg' %}"/>
+                        <div class="card-image card_img">
+                            <img class="" src="{% static 'img/event_one.jpg' %}"/>
                             <span class="card-title card_title">Card Title</span>
                         </div>
                         <div class="card-content">
@@ -59,8 +58,8 @@
                 </div>
                 <div class="col s12 m4">
                     <div class="card z-depth-5 hoverable">
-                        <div class="card-image">
-                            <img class="event_img" src="{% static 'img/event_three.jpg' %}"/>
+                        <div class="card-image card_img">
+                            <img class="" src="{% static 'img/event_three.jpg' %}"/>
                             <span class="card-title">Card Title</span>
                         </div>
                         <div class="card-content">
@@ -76,21 +75,17 @@
             </div>
         </div>
     </div>
-    {#<hr class = "#e0e0e0 grey lighten-5"/>#}
+    {#    <div class="divider"></div>#}
     <div class="container">
         <div class="row">
             <div class="col sm12">
-                <blockquote class="flow-text">
-                    Morbi placerat imperdiet risus quis blandit.
-                    Ut lobortis elit luctus, feugiat erat vitae,
-                    interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.
-                    Curabitur id sapien massa. In hac habitasse platea dictumst.
-                    Integer tristique leo consectetur libero pretium pretium.
-                    Nunc sed mauris magna. Praesent varius purus id turpis iaculis iaculis.
-                    Nulla convallis magna nunc, id rhoncus massa ornare in. Donec et feugiat sem, ac rhoncus mauris.
-                    Quisque eget tempor massa
-                    Morbi placerat imperdiet risus quis blandit.
-                </blockquote>
+                <p class="flow-text block_text light center-align">
+{#                    <i class="fa fa-quote-left purple-text darken-2 fa-2x" aria-hidden="true"></i>&nbsp#}
+                    The University of Manchester
+                    Alumni Association
+                    in Uganda (UMAAU) aims to keep you connected to the
+                    University of Manchester through a series of re-unions, social events and other activities.
+                </p>
                 <div class="center-align member_btn_div">
                     <a href="{% url 'membership:membership' %}"
                        class=" waves-effect waves-light black-text yellow accent-2 btn tooltipped z-depth-5"
@@ -101,14 +96,56 @@
             </div>
         </div>
     </div>
-    <div id="modal" class="modal">
+    <div id="modal" class="modal contact_us_modal">
         <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+            <div class="container">
+                <h4 class="center-align">Write to us!</h4>
+                <p class="center-align light member_paragraph">We are happy to address any of your concerns</p>
+                <div>
+                    <form method="POST">
+                        {#                    {{ form.as_p }}#}
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col s12 m6 input-field input_field">
+                                <input type="text" id="first_name" placeholder="First Name" class="validate"
+                                       name="{{ form.first_name.html_name }}"
+                                       required>
+                            </div>
+                            <div class="col s12 m6 input-field input_field">
+                                <input type="text" placeholder="Last Name"
+                                       class="validate name="{{ form.last_name.html_name }}"
+                                required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m6 input-field input_field">
+                                <input type="email" placeholder="Email" class="validate"
+                                       name="{{ form.email.html_name }}" required>
+                            </div>
+                            <div class="col s12 m6 input-field input_field">
+                                <input type="email" placeholder="Confirm Email" class="validate"
+                                       name="{{ form.verify_email.html_name }}"
+                                       required>
+                            </div>
+                            <div class="col s12 input-field input_field">
+                                &nbsp&nbsp<label>Your Message</label>
+                                <div class="section">
+                                <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
+                                          type="text"
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="waves-effect waves-light black-text yellow accent-2 btn z-depth-4 right-align">
+                            <input type="submit" value="Submit" class="form_btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
+
     </div>
 {% endblock content %}
 <script>

@@ -18,32 +18,32 @@
     <div class="row">
         <div class="container">
             <div class="col s12 m6">
-                <h3 class="purple-text darken-2">Ordinary Member</h3>
+                <h4 class="">Ordinary Member</h4>
                 <p class="light member_paragraph">
                     These are Alumni of the University of manchester or its former universities.
                 </p>
                 <h5>Annual Subscription & Membership Fee</h5>
                 <p class="light member_paragraph">UGX: 50,000</p>
-                <div class="member_btn_div">
-                    <a href="#modal" class=" waves-effect waves-light black-text yellow
-                       accent-2 btn tooltipped modal-trigger  z-depth-0" data-position="bottom"
-                    data-tooltip="Click to fill in contact form"
-                    data-delay="50">
+                <div class="member_btn_div associate_btn">
+                    <a href="#modal" class=" waves-effect waves-light black-text
+                        btn tooltipped modal-trigger  z-depth-0" data-position="bottom"
+                       data-tooltip="Click to fill in contact form"
+                       data-delay="50">
                         Contact Us
                     </a>
                 </div>
             </div>
             <div class="col s12 m6">
-                <h3 class="purple-text darken-2">Associate Member</h3>
+                <h4 class="">Associate Member</h4>
                 <p class="light member_paragraph">
-                    People who do not meet the criterion of an ordinary member but are desirous of joining the
+                    These do not meet the criterion of an ordinary member but desire to join the
                     association.
                 </p>
                 <h5>Annual Subscription & Membership Fee</h5>
                 <p class="light member_paragraph">UGX: 100,000</p>
                 <div class="member_btn_div associate_btn">
                     <a href="{% static 'docs/constitution.pdf' %}" target="_blank" class="
-                       waves-effect waves-light black-text yellow accent-2 btn tooltipped z-depth-0"
+                       waves-effect waves-light black-text btn tooltipped z-depth-0"
                        data-position="bottom" data-tooltip="Click to read the Constitution" data-delay="50">
                         Find out More
                     </a>
@@ -52,59 +52,56 @@
             </div>
         </div>
     </div>
-{#    <div id="modal" class="modal">#}
-{#        <div class="modal-content">#}
-{#            <h4>Modal Header</h4>#}
-{#            <p>A bunch of text</p>#}
-{#            #}
-{#        </div>#}
-{#        <div class="modal-footer">#}
-{#            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>#}
-{#        </div>#}
-{#    </div>#}
-    <div id="modal" class="modal">
+    <div id="modal" class="modal contact_us_modal">
         <div class="modal-content">
-            <h4 class="center-align">Write to us!</h4>
-            <p>We shall be happy to address any of your concerns</p>
-            <div>
-                <form method="POST">
-{#                    {{ form.as_p }}#}
-                    {% csrf_token %}
-                    <div>
-                        <input type="text" placeholder="First Name" name="{{ form.first_name.html_name }}" required>
-                    </div>
-
-                    <div>
-                        <input type="text" placeholder="Last Name" name="{{ form.last_name.html_name }}" required>
-                    </div>
-
-                    <div>
-                        <input type="email" placeholder="Email" name="{{ form.email.html_name }}" required>
-                    </div>
-
-                    <div>
-                        <input type="email" placeholder="Confirm Email" name="{{ form.verify_email.html_name }}" required>
-                    </div>
-
-                    <div>
-                        <input type="text" placeholder="Subject" name="{{ form.subject.html_name }}">
-                    </div>
-
-                    <div>
-                        <input type="text" placeholder="Message/Suggestion" name="{{ form.suggestion.html_name }}"
-                               required>
-                    </div>
-
-                    <div>
-                        <input type="submit" value="Submit">
-                    </div>
+            <div class="container">
+                <h4 class="center-align">Write to us!</h4>
+                <p class="center-align light member_paragraph">We are happy to address any of your concerns</p>
+                <div>
+                    <form method="POST">
+                        {#                    {{ form.as_p }}#}
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col s12 m6 input-field input_field">
+                                <input type="text" id="first_name" placeholder="First Name" class="validate"
+                                       name="{{ form.first_name.html_name }}"
+                                       required>
+                            </div>
+                            <div class="col s12 m6 input-field input_field">
+                                <input type="text" placeholder="Last Name"
+                                       class="validate name="{{ form.last_name.html_name }}"
+                                required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m6 input-field input_field">
+                                <input type="email" placeholder="Email" class="validate"
+                                       name="{{ form.email.html_name }}" required>
+                            </div>
+                            <div class="col s12 m6 input-field input_field">
+                                <input type="email" placeholder="Confirm Email" class="validate"
+                                       name="{{ form.verify_email.html_name }}"
+                                       required>
+                            </div>
+                            <div class="col s12 input-field input_field">
+                                &nbsp&nbsp<label>Your Message</label>
+                                <div class="section">
+                                <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
+                                          type="text"
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="waves-effect waves-light black-text yellow accent-2 btn z-depth-4 right-align">
+                        <input type="submit" value="Submit" class="form_btn">
+                </div>
                 </form>
             </div>
+        </div>
+    </div>
 
-        </div>
-        <div class="modal-footer">
-            {#            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>#}
-        </div>
     </div>
 
 {% endblock content %}
