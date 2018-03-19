@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}About Us | UMAAU{% endblock title %}</title>
+</head>
+<div>
+    {% block content %}
+        <div class="events_banner">
+            <div class=" container">
+                <h2 class="center-align">Who we Are...</h2>
+            </div>
+        </div>
+        <div class="mission_vision container">
+            <blockquote class="flow-text ">
+                Morbi placerat imperdiet risus quis blandit.
+                Ut lobortis elit luctus, feugiat erat vitae,
+                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.
+                Curabitur id sapien massa. In hac habitasse platea dictumst.
+                Morbi placerat imperdiet risus quis blandit.
+            </blockquote>
+        </div>
+        <div class="divider"></div>
+        <div class="container row">
+            <div class="col s6">
+                <h4 class="center">Mission</h4>
+                <p class="flow-text ">
+                    Morbi placerat imperdiet risus quis blandit.
+                    Ut lobortis elit luctus, feugiat erat vitae,
+                    interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.
+                    Curabitur id sapien massa. In hac habitasse platea dictumst.
+                    Integer tristique leo consectetur libero pretium pretium.
+                </p>
+            </div>
+            <div class="col s6">
+                <h4 class="center">Vision</h4>
+                <p class="flow-text ">
+                    Morbi placerat imperdiet risus quis blandit.
+                    Ut lobortis elit luctus, feugiat erat vitae,
+                    interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.
+                    Curabitur id sapien massa. In hac habitasse platea dictumst.
+                    Integer tristique leo consectetur libero pretium pretium.
+                </p>
+            </div>
+        </div>
+
+        <div class="container row">
+            <h4 class="center-align">Meet the Committee</h4>
+        </div>
+        <div class="container row">
+            <div class="col s12 m3 center-on-small-only">
+                <div class="team_img">
+                    <img src="{% static 'img/edwin.jpg' %}" class="responsive-img circle">
+                </div>
+            </div>
+            <div class="col s12 m9">
+                <h5>Edwin Mugume</h5>
+                <p>
+                    Dr Edwin Mugume is the acting Interim President of the Association.
+                    He was at the University of manchester in the years 2010 to 2011 and 2012 to 2016.
+                    During which, he pursued a Master's degree in Communication Engineering and
+                    a phD in Electrical and Electronic Engineering respectively.
+                </p>
+            </div>
+        </div>
+        <div class="container row">
+            <div class="col s12 m3 center-on-small-only">
+                <div class="team_img">
+                    <img src="{% static 'img/robert.jpg' %}" class="responsive-img circle">
+                </div>
+            </div>
+            <div class="col s12 m9">
+                <h5>Robert Tugume</h5>
+                <p>
+                    Robert is the Deputy Secretary of the Association.
+                    He was at the University of manchester in the years 2012 to 2013.
+                    During which, he pursued a Master's degree in Petroleum Geoscience for Reservoir Development and
+                    Production.
+                    He was at the Faculty of Engineering and Physical Sciences.
+                </p>
+            </div>
+        </div>
+        {#    <div class="container row">#}
+        {#        <div class="col s12 m3 center-on-small-only">#}
+        {#            <div class="team_img">#}
+        {#                <img src="{% static 'img/patrick.jpg' %}" class="responsive-img circle">#}
+        {#            </div>#}
+        {#        </div>#}
+        {#        <div class="col s12 m9">#}
+        {#            <h5>Patrick Mugwanya</h5>#}
+        {#            <p>#}
+        {#                Patrick is the Publicity secretary of the Association.#}
+        {#                He was at the University of manchester in the years 2013 to 2014.#}
+        {#                During which, he pursued a Master's degree in Electrical Power Systems Engineering#}
+        {#            </p>#}
+        {#        </div>#}
+        {#    </div>#}
+        <div class="container row">
+            <div class="col s12 m3 center-on-small-only">
+                <div class="team_img">
+                    <img src="{% static 'img/elijah.jpg' %}" class="responsive-img circle">
+                </div>
+            </div>
+            <div class="col s12 m9">
+                <h5>Elijah Muhumuza</h5>
+                <p>
+                    Elijah is the Treasurer of the Association.
+                    He was at the University of manchester in the years 2011 to 2014.
+                    During which, he pursued a Bachelor of Arts degree in Economics & Social Studies.
+                    He majored in Accounting & Finance
+                </p>
+            </div>
+        </div>
+        <div class="container row">
+            <div class="col s12 m3 center-on-small-only">
+                <div class="team_img">
+                    <img src="{% static 'img/sheila.jpg' %}" class="responsive-img circle">
+                </div>
+            </div>
+            <div class="col s12 m9">
+                <h5>Sheila Catherine Abamu</h5>
+                <p>
+                    Sheila is the acting interim Secretary of the Association.
+                    She was at the University of manchester in the years 2013 to 2014.
+                    During which, she pursued a Master of Laws degree in Corporate Governance.
+                </p>
+            </div>
+        </div>
+
+
+    {% endblock content %}
+    </body>
+</html>

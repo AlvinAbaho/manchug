@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Events | UMAAU{% endblock title %}</title>
+</head>
+<body id="events">
+{% block content %}
+    <div class="events_banner">
+        <div class=" container">
+            <h1 class="center-align">Our activities...</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="events_container">
+            <div class="col s12 m12 l8">
+                <div class="row center-align">
+                    <div class="">
+                        <h3 class="center-align">Recent Events</h3>
+                        <div class="col s12 m6">
+                            <div class="card z-depth-2">
+                                <div class="card-image">
+                                    <img class="event_img" src="{% static 'img/event_three.jpg' %}"/>
+                                    <span class="card-title">Card Title</span>
+                                </div>
+                                <div class="card-content left-align">
+                                    <p class=card_content>Morbi placerat imperdiet risus quis blandit.
+                                        Ut lobortis elit luctus, feugiat erat vitae,
+                                        interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget
+                                        tellus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="card z-depth-2">
+                                <div class="card-image">
+                                    <img class="event_img" src="{% static 'img/event_one.jpg' %}"/>
+                                    <span class="card-title">Card Title</span>
+                                </div>
+                                <div class="card-content left-align">
+                                    <p class=card_content>Morbi placerat imperdiet risus quis blandit.
+                                        Ut lobortis elit luctus, feugiat erat vitae,
+                                        interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget
+                                        tellus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4">
+                <div class="row">
+                    <div class="">
+                        <h3 class="center-align">Upcoming Events</h3>
+                        <div class="col s12 m12">
+                            <div class="card horizontal row z-depth-2">
+                                <div class="card-image purple darken-2 col s4"></div>
+                                <div class="card-stacked col s8">
+                                    <div class="card-content left-align">
+                                        <p>Morbi placerat imperdiet risus quis blandit.
+                                            Ut lobortis elit luctus, feugiat erat vitae,
+                                            interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget
+                                            tellus
+                                            Ut lobortis elit luctus, feugiat erat vitae,
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 ">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container center">
+        <h3 class="">Events Gallery</h3>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col s12 m4 modal-trigger" href="#modal_img_one">
+                <img src="{% static 'img/event_one.jpg' %}" class="responsive-img z-depth-3 hoverable">
+            </div>
+            <div id="modal_img_one" class="modal my_modal">
+                <div class="my_modal_content">
+                    <img src="{% static 'img/event_one.jpg' %}" class="responsive-img z-depth-3 hoverable">
+                </div>
+            </div>
+            <div class="col s12 m4 modal-trigger" href="#modal_img_two">
+                <img src="{% static 'img/event_two.jpg' %}" class="responsive-img z-depth-3 hoverable">
+            </div>
+            <div id="modal_img_two" class="modal my_modal">
+                <div class="my_modal_content">
+                    <img src="{% static 'img/event_two.jpg' %}" class="responsive-img z-depth-3 hoverable">
+                </div>
+            </div>
+            <div class="col s12 m4 modal-trigger" href="#modal_img_three">
+                <img src="{% static 'img/event_three.jpg' %}" class="responsive-img z-depth-3 hoverable">
+            </div>
+            <div id="modal_img_three" class="modal my_modal">
+                <div class="my_modal_content">
+                    <img src="{% static 'img/event_three.jpg' %}" class="responsive-img z-depth-3 hoverable">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+</body>
+</html>

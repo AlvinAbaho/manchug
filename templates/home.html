@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{#{% load static from staticfiles %}#}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}UMAAU{% endblock title %}</title>
+</head>
+<body>
+{% block content %}
+    <div class="site_banner">
+        <div class=" container">
+            <h1 class="center-align">University of Manchester Alumni Association in Uganda</h1>
+            <div class="center-align member_btn_div">
+                <a href="#modal"
+                   class="modal-trigger waves-effect waves-light black-text yellow accent-2 btn tooltipped z-depth-0"
+                   data-position="bottom" data-tooltip="Click to fill in Contact form" data-delay="50">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section events_cards">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card z-depth-5 hoverable">
+                        <div class="card-image">
+                            <img class="event_img responsive-img" src="{% static 'img/event_two.jpg' %}"/>
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p class=card_content>Morbi placerat imperdiet risus quis blandit.
+                                Ut lobortis elit luctus, feugiat erat vitae,
+                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="{% url 'events:events' %}" class="read_more">View more..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card z-depth-5 hoverable">
+                        <div class="card-image">
+                            <img class="event_img" src="{% static 'img/event_one.jpg' %}"/>
+                            <span class="card-title card_title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p class=card_content>Morbi placerat imperdiet risus quis blandit.
+                                Ut lobortis elit luctus, feugiat erat vitae,
+                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="{% url 'events:events' %}" class="read_more">View more..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card z-depth-5 hoverable">
+                        <div class="card-image">
+                            <img class="event_img" src="{% static 'img/event_three.jpg' %}"/>
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p class=card_content>Morbi placerat imperdiet risus quis blandit.
+                                Ut lobortis elit luctus, feugiat erat vitae,
+                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="{% url 'events:events' %}" class="read_more">View more..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {#<hr class = "#e0e0e0 grey lighten-5"/>#}
+    <div class="container">
+        <div class="row">
+            <div class="col sm12">
+                <blockquote class="flow-text">
+                    Morbi placerat imperdiet risus quis blandit.
+                    Ut lobortis elit luctus, feugiat erat vitae,
+                    interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.
+                    Curabitur id sapien massa. In hac habitasse platea dictumst.
+                    Integer tristique leo consectetur libero pretium pretium.
+                    Nunc sed mauris magna. Praesent varius purus id turpis iaculis iaculis.
+                    Nulla convallis magna nunc, id rhoncus massa ornare in. Donec et feugiat sem, ac rhoncus mauris.
+                    Quisque eget tempor massa
+                    Morbi placerat imperdiet risus quis blandit.
+                </blockquote>
+                <div class="center-align member_btn_div">
+                    <a href="{% url 'membership:membership' %}"
+                       class=" waves-effect waves-light black-text yellow accent-2 btn tooltipped z-depth-5"
+                       data-position="bottom" data-tooltip="Click to find out how to become a Member" data-delay="50">
+                        Become a Member
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+{% endblock content %}
+<script>
+    $(document).ready(function () {
+
+    });
+</script>
+</body>
+
+
+</html>
