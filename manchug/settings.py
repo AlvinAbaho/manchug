@@ -24,7 +24,7 @@ SECRET_KEY = '*q1lrs0hev^5$2rk^*fyah$dqk+x$n6jlxi)vyb^7w6hs9l)=7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'abaho.pythonanywhere.com']
 
 # Application definition
 
