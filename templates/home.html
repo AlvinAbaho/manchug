@@ -103,7 +103,7 @@
                 <p class="center-align light member_paragraph">We are happy to address any of your concerns</p>
                 <div>
                     <form method="POST">
-                                            {{ form.as_p }}
+{#                                            {{ form.as_p }}#}
                         {% csrf_token %}
                         <div class="row">
                             <div class="col s12 m6 input-field input_field">
@@ -113,7 +113,7 @@
                             </div>
                             <div class="col s12 m6 input-field input_field">
                                 <input type="text" placeholder="Last Name"
-                                       class="validate name="{{ form.last_name.html_name }}"
+                                       class="validate" name="{{ form.last_name.html_name }}"
                                 required>
                             </div>
                         </div>
