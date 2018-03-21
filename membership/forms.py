@@ -16,7 +16,6 @@ class ContactForm(forms.Form):
     last_name = forms.CharField()
     email = forms.EmailField()
     verify_email = forms.EmailField(label='please verify your email address')
-    subject = forms.CharField()
     suggestion = forms.CharField(widget=forms.Textarea)
     honeypot = forms.CharField(required=False,
                                widget=forms.HiddenInput,
@@ -36,7 +35,8 @@ class ContactForm(forms.Form):
             )
 
     def send_email(self):
-        mail_subject = 'MESSAGE FROM UMAAU WEBSITE: {}'.format(self.cleaned_data['subject'])
+        # mail_subject = 'MESSAGE FROM UMAAU WEBSITE: {}'.format(self.cleaned_data['subject'])
+        mail_subject = 'MESSAGE FROM UMAAU WEBSITE:'
 
         message = render_to_string('membership/email.html', {
             'first_name': self.cleaned_data['first_name'],
