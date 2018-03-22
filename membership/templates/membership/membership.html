@@ -59,16 +59,18 @@
                 <p class="center-align light member_paragraph">We are happy to address any of your concerns</p>
                 <div>
                     <form method="POST">
-                        {#                        {{ form.as_p }}#}
+                        {#                    {{ form.as_p }}#}
                         {% csrf_token %}
                         <div class="row">
                             <div class="col s12 m6 input-field input_field">
                                 <input type="text" id="first_name" placeholder="First Name" class="validate"
-                                       name="{{ form.first_name.html_name }}" required>
+                                       name="{{ form.first_name.html_name }}"
+                                       required>
                             </div>
                             <div class="col s12 m6 input-field input_field">
                                 <input type="text" placeholder="Last Name"
-                                       class="validate" name="{{ form.last_name.html_name }}" required>
+                                       class="validate" name="{{ form.last_name.html_name }}"
+                                required>
                             </div>
                         </div>
                         <div class="row">
@@ -78,27 +80,30 @@
                             </div>
                             <div class="col s12 m6 input-field input_field">
                                 <input type="email" placeholder="Confirm Email" class="validate"
-                                       name="{{ form.verify_email.html_name }}" required>
+                                       name="{{ form.verify_email.html_name }}"
+                                       required>
                             </div>
                             <div class="col s12 input-field input_field">
                                 &nbsp&nbsp<label>Your Message</label>
                                 <div class="section">
-                                    <textarea type="text" class="materialize-textarea"
-                                              id="textarea1" name="{{ form.suggestion.html_name }}" required></textarea>
+                                <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
+                                          type="text"
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="waves-effect waves-light black-text yellow accent-2 btn z-depth-4 right-align">
-                            <input type="submit" value="Submit" class="form_btn">
-                        </div>
-                    </form>
+                        <div class="waves-effect waves-light black-text yellow accent-2 btn right-align">
+                        <input type="submit" value="Submit" class="form_btn">
                 </div>
+                </form>
             </div>
         </div>
+    </div>
 
     </div>
 
 {% endblock content %}
 </body>
 </html>
-

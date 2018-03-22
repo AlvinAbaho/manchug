@@ -11,7 +11,7 @@
 {% block content %}
     <div class="site_banner">
         <div class=" container">
-            <h1 class="center-align">University of Manchester Alumni Association in Uganda</h1>
+            <h1 class="center-align site_heading">University of Manchester Alumni Association in Uganda</h1>
             <div class="center-align member_btn_div">
                 <a href="#modal"
                    class="modal-trigger waves-effect waves-light black-text yellow accent-2 btn tooltipped z-depth-0"
@@ -24,8 +24,8 @@
     <div class="section events_cards">
         <div class="container">
             <div class="row">
-                <div class="col s12 m4">
-                    <div class="card z-depth-5 hoverable">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
                         <div class="card-image card_img">
                             <img class="responsive-img" src="{% static 'img/event_two.jpg' %}"/>
                             <span class="card-title">Card Title</span>
@@ -40,8 +40,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4">
-                    <div class="card z-depth-5 hoverable">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
                         <div class="card-image card_img">
                             <img class="" src="{% static 'img/event_one.jpg' %}"/>
                             <span class="card-title card_title">Card Title</span>
@@ -56,8 +56,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4">
-                    <div class="card z-depth-5 hoverable">
+                <div class="col s12 l4">
+                    <div class="card hoverable">
                         <div class="card-image card_img">
                             <img class="" src="{% static 'img/event_three.jpg' %}"/>
                             <span class="card-title">Card Title</span>
@@ -88,7 +88,7 @@
                 </p>
                 <div class="center-align member_btn_div">
                     <a href="{% url 'membership:membership' %}"
-                       class=" waves-effect waves-light black-text yellow accent-2 btn tooltipped z-depth-5"
+                       class=" waves-effect waves-light black-text yellow accent-2 btn tooltipped"
                        data-position="bottom" data-tooltip="Click to find out how to become a Member" data-delay="50">
                         Become a Member
                     </a>
@@ -103,7 +103,7 @@
                 <p class="center-align light member_paragraph">We are happy to address any of your concerns</p>
                 <div>
                     <form method="POST">
-{#                                            {{ form.as_p }}#}
+                        {#                    {{ form.as_p }}#}
                         {% csrf_token %}
                         <div class="row">
                             <div class="col s12 m6 input-field input_field">
@@ -138,7 +138,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="waves-effect waves-light black-text yellow accent-2 btn z-depth-4 right-align">
+                        <div class="waves-effect waves-light black-text yellow accent-2 btn right-align">
                             <input type="submit" value="Submit" class="form_btn">
                         </div>
                     </form>

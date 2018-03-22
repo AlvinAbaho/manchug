@@ -1,7 +1,7 @@
 # from membership.forms import ContactForm
 from manchug.forms import ContactForm
 from django.views.generic.edit import FormView
-from django.views.generic import TemplateView
+# from django.views.generic import TemplateView
 
 
 class HomePageView(FormView):

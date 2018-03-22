@@ -1,7 +1,15 @@
 /*--------------------- header styles -----------------    */
+.nav_wrapper {
+
+}
+
+.logo_img {
+
+}
+
 nav.nav_bar {
     background-color: #ffffff !important;
-    padding-top: 1.7em;
+    /*padding-top: 1.7em;*/
 }
 
 .side_navigation li a, .nav_bar ul a {
@@ -11,14 +19,10 @@ nav.nav_bar {
 
 .nav_bar ul a:hover {
     font-weight: 700;
-    border-bottom: 2px solid #ffff00 !important;
-    background-color: transparent !important;
 }
 
 .side_navigation li a:hover {
     font-weight: 700;
-    border-bottom: 2px solid #ffff00 !important;
-    background-color: transparent !important;
 }
 
 .nav_bar ul li.my_active {
@@ -33,10 +37,6 @@ nav.nav_bar {
 
 .nav_bar ul.large_nav li {
     margin-right: 1em;
-}
-
-.logo_img {
-    margin-left: 1em;
 }
 
 .menu_icon {
@@ -60,7 +60,38 @@ ul.footer_list li a:hover {
     color: #eeeeee !important;
 }
 
+.ug_flag {
+    float: left !important;
+    width: 25px !important;
+    height: 25px !important;
+
+}
+
+/*.copyright_text {*/
+/*float: left !important;*/
+/*}*/
+
+@media (max-width: 600px) {
+    .center_small {
+        text-align: center;
+    }
+
+    .copyright_text {
+
+    }
+
+    .center_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
 /*--------------------- Home page styles -----------------    */
+.site_heading {
+    font-size: 2.9rem;
+}
 
 .site_banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/img/manchester_banner.jpg");
@@ -70,9 +101,27 @@ ul.footer_list li a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding-top: 16%;
-    padding-bottom: 9%;
-    overflow: hidden;
+    padding-top: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+    .site_banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/img/manchester_banner.jpg");
+        background-color: #000;
+        color: #fff;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top: 16%;
+        padding-bottom: 9%;
+        overflow: hidden;
+    }
+
+    .site_heading {
+        font-size: 4.2rem;
+    }
 }
 
 .card-content p.card_content {
@@ -93,7 +142,13 @@ blockquote {
 }
 
 .block_text {
-    font-size: 2em !important;
+    font-size: 1.6rem !important;
+}
+
+@media (min-width: 600px) {
+    .block_text {
+        font-size: 2rem !important;
+    }
 }
 
 .member_btn_div a {
@@ -120,14 +175,15 @@ blockquote {
 }
 
 .team_img {
-    max-height: 100px !important;
-    max-width: 100px !important;
+    max-height: 200px !important;
+    max-width: 200px !important;
 }
 
 .committee_paragraph {
     font-size: 1.3em !important;
 }
-.president_col{
+
+.president_col {
     padding-left: 0 !important;
 }
 
@@ -188,7 +244,6 @@ blockquote {
 }
 
 /*--------------- Contact Us Form ------------------------*/
-
 .input_field input[type=text]:focus, .input_field input[type=email]:focus {
     border-bottom: 1px solid #d500f9 !important;
     box-shadow: 0 1px 0 0 #d500f9 !important;

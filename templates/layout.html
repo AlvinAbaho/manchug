@@ -7,8 +7,8 @@
     <title>{% block title %}{% endblock title %}</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    {#    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">#}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">#}
     <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}" media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
@@ -17,14 +17,14 @@
 </head>
 <body>
 <div class="navbar-fixed fixed_navbar">
-    <nav class="nav_bar nav-extended">
-        <div class="nav-wrapper #ffffff white row">
-            <div class="col s6 m4 l2">
+    <nav class="nav_bar">
+        <div class="nav-wrapper #ffffff white row nav_wrapper">
+            <div class="col s6 m2 l2">
                 <a href="{% url 'home' %}" class="logo_img">
-                    <img class="responsive-img" src="{% static 'img/manchester_logo.jpg' %}" alt="University Logo"/>
+                    <img class="responsive-img" src="{% static 'img/new_manchester_logo.jpg' %}" alt="University Logo"/>
                 </a>
             </div>
-            <div class="col s6 m8 l10">
+            <div class="col s6 m10 l10">
                 <a href="#" data-activates="slide-out" class="button-collapse right">
                     <i class="material-icons black-text darken-2 menu_icon light">menu</i>
                 </a>
@@ -32,15 +32,19 @@
                     <li class="nav_link {% if request.resolver_match.url_name == 'home' %}my_active{% endif %}">
                         <a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a>
                     </li>
-                    &nbsp&nbsp
+                    &nbsp
                     <li class="nav_link {% if request.resolver_match.url_name == 'about_us' %}my_active{% endif %}">
                         <a class="grey-text text-darken-4" href="{% url 'about_us:about_us' %}">About Us</a>
                     </li>
-                    &nbsp&nbsp
+                    &nbsp
+                    <li class="nav_link {% if request.resolver_match.url_name == 'committee' %}my_active{% endif %}">
+                        <a class="grey-text text-darken-4" href="{% url 'committee:committee' %}">Committee</a>
+                    </li>
+                    &nbsp
                     <li class="nav_link {% if request.resolver_match.url_name == 'events' %}my_active{% endif %}">
                         <a class="grey-text text-darken-4" href="{% url 'events:events' %}">Events</a>
                     </li>
-                    &nbsp&nbsp
+                    &nbsp
                     <li class="nav_link {% if request.resolver_match.url_name == 'membership' %}my_active{% endif %}">
                         <a class="grey-text text-darken-4" href="{% url 'membership:membership' %}">Membership</a>
                     </li>
@@ -56,6 +60,9 @@
     <li class="nav_link {% if request.resolver_match.url_name == 'about_us' %}my_active{% endif %}">
         <a class="grey-text text-darken-4" href="{% url 'about_us:about_us' %}">About Us</a>
     </li>
+    <li class="nav_link {% if request.resolver_match.url_name == 'committee' %}my_active{% endif %}">
+        <a class="grey-text text-darken-4" href="{% url 'committee:committee' %}">Committee</a>
+    </li>
     <li class="nav_link {% if request.resolver_match.url_name == 'events' %}my_active{% endif %}">
         <a class="grey-text text-darken-4" href="{% url 'events:events' %}">Events</a>
     </li>
@@ -66,8 +73,8 @@
 
 {% block content %}{% endblock content %}
 
-<footer class="page-footer purple darken-3 footerStyles">
-    <div class="row">
+<footer class="page-footer purple darken-3 ">
+    <div class="row center_small">
         <div class="container">
             <div class="col m6 s12 section">
                 <h5 class="grey-text text-lighten-1">Useful Links</h5>
@@ -84,8 +91,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="grey-text text-lighten-1 light" href="https://www.manchester.ac.uk/connect/alumni/" target="_blank">
-                            Check out the Alumni Association of the University of Manchester
+                        <a class="grey-text text-lighten-1 light" href="https://www.manchester.ac.uk/connect/alumni/"
+                           target="_blank">
+                            Check out the Alumni Association of the <br>University of Manchester
                         </a>
                     </li>
                 </ul>
@@ -96,26 +104,34 @@
                 <i class="fa fa-twitter grey-text text-lighten-1 social_icon"></i>&nbsp&nbsp&nbsp&nbsp
                 <i class="fa fa-linkedin grey-text text-lighten-1 social_icon"></i>
             </div>
+
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <div class="grey-text">
-                Copyright © 2018 University of Manchester Alumni Association of Uganda. All Rights Reserved
-                {#            <img src="{% static 'img/uganda_flag.png' %}" class="responsive-img right-align">#}
+            <div class="clearfix">
+                <span class="">
+                    <img class="responsive-img ug_flag center_img" src="{% static 'img/ug.png' %}">
+                </span>&nbsp&nbsp&nbsp&nbsp
+                <span class="grey-text copyright_text">
+                    Copyright © 2018 University of Manchester Alumni Association of Uganda. All Rights Reserved
+                </span>
             </div>
         </div>
     </div>
 </footer>
 
+{#<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>#}
 <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
 <script src="{% static 'js/materialize.js' %}"></script>
-<script src="{% static 'js/script.js' %}"></script>
+
 <script>
     $(document).ready(function () {
         $('.tooltipped').tooltip({delay: 50});
         $(".button-collapse").sideNav();
         Materialize.updateTextFields();
+        $('.modal').modal();
     });
 
 </script>

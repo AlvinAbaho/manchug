@@ -5,5 +5,9 @@ class EventsView(TemplateView):
     template_name = 'events/events.html'
 
 
-class EventDetailView(TemplateView):
-    template_name = 'events/event_detail_view.html'
+class EventOneView(TemplateView):
+    template_name = 'events/event_one.html'
+
+
+class EventTwoView(TemplateView):
+    template_name = 'events/event_two.html'
