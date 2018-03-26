@@ -6,10 +6,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>{% block title %}Event One | UMAAU{% endblock title %}</title>
+    <title>{% block title %}Event Detail | UMAAU{% endblock title %}</title>
 </head>
 <body>
 {% block content %}
+    <main>
+        <div class="container">
+            <h3>This is a blog title</h3>
+            <img class="blog_img responsive-img" src="{% static 'img/event_one_wide.jpg' %}"/>
+        </div>
+    </main>
 
 {% endblock %}
 </body>

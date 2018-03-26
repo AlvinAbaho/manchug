@@ -1,10 +1,6 @@
 /*--------------------- header styles -----------------    */
-.nav_wrapper {
-
-}
-
-.logo_img {
-
+.logo_column {
+    margin-left: -11px !important;
 }
 
 nav.nav_bar {
@@ -14,30 +10,30 @@ nav.nav_bar {
 
 .side_navigation li a, .nav_bar ul a {
     font-size: 1.3em !important;
-    font-weight: 500;
+    /*font-weight: 500;*/
 }
 
 .nav_bar ul a:hover {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .side_navigation li a:hover {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .nav_bar ul li.my_active {
-    font-weight: 700;
+    font-weight: 500;
     background-color: #ffff00 !important;
 }
 
 .my_active {
-    font-weight: 700;
+    font-weight: 500;
     background-color: #ffff00 !important;
 }
 
-.nav_bar ul.large_nav li {
-    margin-right: 1em;
-}
+/*.nav_bar ul.large_nav li {*/
+/*margin-right: 1em;*/
+/*}*/
 
 .menu_icon {
     font-size: 3em !important;
@@ -71,23 +67,6 @@ ul.footer_list li a:hover {
 /*float: left !important;*/
 /*}*/
 
-@media (max-width: 600px) {
-    .center_small {
-        text-align: center;
-    }
-
-    .copyright_text {
-
-    }
-
-    .center_img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-}
-
 /*--------------------- Home page styles -----------------    */
 .site_heading {
     font-size: 2.9rem;
@@ -103,25 +82,6 @@ ul.footer_list li a:hover {
     background-size: cover;
     padding-top: 1.3rem;
     padding-bottom: 2rem;
-}
-
-@media (min-width: 600px) {
-    .site_banner {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/img/manchester_banner.jpg");
-        background-color: #000;
-        color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        padding-top: 16%;
-        padding-bottom: 9%;
-        overflow: hidden;
-    }
-
-    .site_heading {
-        font-size: 4.2rem;
-    }
 }
 
 .card-content p.card_content {
@@ -145,59 +105,36 @@ blockquote {
     font-size: 1.6rem !important;
 }
 
-@media (min-width: 600px) {
-    .block_text {
-        font-size: 2rem !important;
-    }
-}
-
 .member_btn_div a {
     font-weight: 600 !important;
 }
 
 /*--------------------- About Us styles ----------------*/
 .about_us_banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/static/img/about_us_banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/img/about_us_banner.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: #fff !important;
-    padding-top: 14em !important;
-    padding-bottom: 9em !important;
-    /*overflow: hidden !important;*/
-    /*height: 100%;*/
-    /*background-color: grey;*/
+    padding-top: 65px !important;
+    padding-bottom: 78px !important;
 }
 
 .mission_vision {
     padding-top: 6em !important;
 }
 
-.team_img {
-    max-height: 200px !important;
-    max-width: 200px !important;
-}
-
-.committee_paragraph {
-    font-size: 1.3em !important;
-}
-
-.president_col {
-    padding-left: 0 !important;
-}
-
 /*--------------------- Membership styles ----------------*/
 .membership_banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("/static/img/membership_banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/img/membership_banner.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: #fff;
-    padding-top: 14em;
-    padding-bottom: 9em;
-    overflow: hidden;
+    padding-top: 65px !important;
+    padding-bottom: 78px !important;
 }
 
 .member_paragraph {
@@ -212,14 +149,14 @@ blockquote {
 
 /*--------------------- Events styles ----------------*/
 .events_banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/static/img/events_banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/img/events_banner.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: #fff;
-    padding-top: 14em;
-    padding-bottom: 8em;
+    padding-top: 65px !important;
+    padding-bottom: 78px !important;
     overflow: hidden;
 }
 
@@ -238,9 +175,12 @@ blockquote {
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
-    -ms-border-radius: 0 !important;
-    -o-border-radius: 0 !important;
     border: 1px solid #dedede;
+}
+
+/*------------------Events Blog ---------------------------*/
+.blog_img {
+
 }
 
 /*--------------- Contact Us Form ------------------------*/
@@ -260,4 +200,70 @@ blockquote {
 
 .form_btn {
     font-weight: 700;
+}
+
+/*------------------- Committe Styles -----------------------*/
+.committe_banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/static/img/committe_banner.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff !important;
+    padding-top: 65px !important;
+    padding-bottom: 78px !important;
+}
+
+.team_img {
+    max-height: 200px !important;
+    max-width: 200px !important;
+}
+
+.committee_paragraph {
+    font-size: 1.3em !important;
+}
+
+.president_col {
+    padding-left: 0 !important;
+}
+
+/*--------------- Media Queries ---------------------------*/
+@media (min-width: 600px) {
+    .site_banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/img/manchester_banner.jpg");
+        background-color: #000;
+        color: #fff;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top: 16%;
+        padding-bottom: 9%;
+        overflow: hidden;
+    }
+
+    .site_heading {
+        font-size: 4.2rem;
+    }
+
+    .block_text {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .center_small {
+        text-align: center;
+    }
+
+    .copyright_text {
+
+    }
+
+    .center_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
