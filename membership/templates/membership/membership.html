@@ -11,13 +11,13 @@
 {% block content %}
 
     <div class="membership_banner">
-        <div class=" container">
-            <h1 class="center-align">Become a Member...</h1>
+        <div class=" container col s12">
+            <h2 class="center-align">Become a Member...</h2>
         </div>
     </div>
     <div class="row">
         <div class="container">
-            <div class="col s12 m6">
+            <div class="col s12 m6 center_small">
                 <h4 class="">Ordinary Member</h4>
                 <p class="light member_paragraph">
                     These are Alumni of the University of manchester or its former universities.
@@ -33,7 +33,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col s12 m6">
+            <div class="col s12 m6 center_small">
                 <h4 class="">Associate Member</h4>
                 <p class="light member_paragraph">
                     These do not meet the criterion of an ordinary member but desire to join the
@@ -88,9 +88,7 @@
                                 <div class="section">
                                 <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
                                           type="text"
-                                          name="{{ form.suggestion.html_name }}"
-                                          required>
-                                </textarea>
+                                          name="{{ form.suggestion.html_name }}" required>  </textarea>
                                 </div>
                             </div>
                         </div>

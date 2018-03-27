@@ -1,6 +1,6 @@
 /*--------------------- header styles -----------------    */
 .logo_column {
-    margin-left: -11px !important;
+    margin-left: 2em !important;
 }
 
 nav.nav_bar {
@@ -63,6 +63,14 @@ ul.footer_list li a:hover {
 
 }
 
+.flag_span {
+    display: inline-block !important;
+}
+
+.copyright_text {
+    display: inline-block !important;
+}
+
 /*.copyright_text {*/
 /*float: left !important;*/
 /*}*/
@@ -101,7 +109,7 @@ blockquote {
     border-left: 5px solid #6a1b9a !important;
 }
 
-.block_text {
+.block_text_home {
     font-size: 1.6rem !important;
 }
 
@@ -133,8 +141,8 @@ blockquote {
     -o-background-size: cover;
     background-size: cover;
     color: #fff;
-    padding-top: 65px !important;
-    padding-bottom: 78px !important;
+    padding-top: 60px !important;
+    padding-bottom: 70px !important;
 }
 
 .member_paragraph {
@@ -180,7 +188,9 @@ blockquote {
 
 /*------------------Events Blog ---------------------------*/
 .blog_img {
-
+    max-height: 24em;
+    display: block;
+    overflow: hidden;
 }
 
 /*--------------- Contact Us Form ------------------------*/
@@ -246,7 +256,7 @@ blockquote {
         font-size: 4.2rem;
     }
 
-    .block_text {
+    .block_text_home {
         font-size: 2rem !important;
     }
 }
@@ -256,14 +266,25 @@ blockquote {
         text-align: center;
     }
 
-    .copyright_text {
-
-    }
-
     .center_img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto !important;
+        float: none !important;
     }
+    .container_center{
+
+    }
+
+    .logo_small {
+        height: 4em !important;
+    }
+
+    .logo_column {
+        margin-left: -0.5em !important;
+    }
+    /*.flag_span{*/
+        /*display: block !important;*/
+        /*margin: auto !important;*/
+        /*float: none !important;*/
+    /*}*/
 
 }

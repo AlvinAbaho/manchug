@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">#}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
     <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}" media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
@@ -19,12 +20,12 @@
 <div class="navbar-fixed fixed_navbar">
     <nav class="nav_bar">
         <div class="nav-wrapper #ffffff white row nav_wrapper">
-            <div class="col s6 m2 l2 logo_column">
-                <a href="{% url 'home' %}" class="logo_img">
-                    <img class="responsive-img" src="{% static 'img/new_manchester_logo.jpg' %}" alt="University Logo"/>
+            <span class="col s6 m2 l2 ">
+                <a href="{% url 'home' %}" class="logo_img logo_column">
+                    <img class="logo_small" src="{% static 'img/logo_small.jpg' %}" alt="University Logo"/>
                 </a>
-            </div>
-            <div class="col s6 m10 l10">
+            </span>
+            <span class="col s6 m10 l10">
                 <a href="#" data-activates="slide-out" class="button-collapse right">
                     <i class="material-icons black-text darken-2 menu_icon light">menu</i>
                 </a>
@@ -49,7 +50,7 @@
                         <a class="grey-text text-darken-4" href="{% url 'membership:membership' %}">Membership</a>
                     </li>
                 </ul>
-            </div>
+            </span>
         </div>
     </nav>
 </div>
@@ -109,14 +110,12 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <div class="clearfix">
-                <span class="">
-                    <img class="responsive-img ug_flag center_img" src="{% static 'img/ug.png' %}">
+                <span class="flag_span ">
+                    <img class="responsive-img ug_flag hide-on-med-and-down" src="{% static 'img/ug.png' %}">
                 </span>&nbsp&nbsp&nbsp&nbsp
-                <span class="grey-text copyright_text">
+                <span class="grey-text copyright_text center_small">
                     Copyright © 2018 University of Manchester Alumni Association of Uganda. All Rights Reserved
                 </span>
-            </div>
         </div>
     </div>
 </footer>
@@ -124,6 +123,7 @@
 {#<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>#}
 {#<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>#}
 <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 <script src="{% static 'js/materialize.js' %}"></script>
 
 <script>
@@ -132,6 +132,7 @@
         $(".button-collapse").sideNav();
         Materialize.updateTextFields();
         $('.modal').modal();
+
     });
 
 </script>

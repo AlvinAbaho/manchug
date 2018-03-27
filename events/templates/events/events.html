@@ -10,8 +10,8 @@
 <body id="events">
 {% block content %}
     <div class="events_banner">
-        <div class=" container ">
-            <h1 class="center-align">Our activities...</h1>
+        <div class=" container col s12">
+            <h2 class="center-align">Our activities...</h2>
         </div>
     </div>
     <div class="row">
@@ -42,7 +42,7 @@
                         <div class="col s12 m6">
                             <div class="card events_card z-depth-0">
                                 <div class="card-image card_img">
-                                    <img class="event_img " src="{% static 'img/event_two.jpg' %}"/>
+                                    <img class="event_img " src="{% static 'img/event_one.jpg' %}"/>
                                     <span class="card-title">Card Title</span>
                                 </div>
                                 <div class="card-content left-align">
@@ -70,7 +70,7 @@
                                 <div class="">
                                     <div class="card-content left-align">
                                         <span class="card-title">Card Title</span>
-                                        <p>Morbi placerat imperdiet risus quis blandit.
+                                        <p class="card_content">Morbi placerat imperdiet risus quis blandit.
                                             Ut lobortis elit luctus, feugiat erat vitae,
                                             interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget
                                             tellus
@@ -89,7 +89,7 @@
                                 <div class="">
                                     <div class="card-content left-align">
                                         <span class="card-title">Card Title</span>
-                                        <p>Morbi placerat imperdiet risus quis blandit.
+                                        <p class="card_content">Morbi placerat imperdiet risus quis blandit.
                                             Ut lobortis elit luctus, feugiat erat vitae,
                                             interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget
                                             tellus
@@ -115,37 +115,7 @@
         </div>
 
     </div>
-    <div class="container center">
-        <h3 class="">Events Gallery</h3>
-    </div>
-    <div class="row">
-        <div class="container">
-            <div class="col s12 m4 modal-trigger" href="#modal_img_one">
-                <img src="{% static 'img/event_one.jpg' %}" class="responsive-img z-depth-0 events_card">
-            </div>
-            <div id="modal_img_one" class="modal my_modal   ">
-                <div class="my_modal_content">
-                    <img src="{% static 'img/event_one.jpg' %}" class="responsive-img z-depth-0">
-                </div>
-            </div>
-            <div class="col s12 m4 modal-trigger" href="#modal_img_two">
-                <img src="{% static 'img/event_two.jpg' %}" class="responsive-img z-depth-0 events_card">
-            </div>
-            <div id="modal_img_two" class="modal my_modal">
-                <div class="my_modal_content">
-                    <img src="{% static 'img/event_two.jpg' %}" class="responsive-img z-depth-0">
-                </div>
-            </div>
-            <div class="col s12 m4 modal-trigger" href="#modal_img_three">
-                <img src="{% static 'img/event_three.jpg' %}" class="responsive-img z-depth-0 events_card">
-            </div>
-            <div id="modal_img_three" class="modal my_modal">
-                <div class="my_modal_content">
-                    <img src="{% static 'img/event_three.jpg' %}" class="responsive-img z-depth-0">
-                </div>
-            </div>
-        </div>
-    </div>
+
 {% endblock content %}
 </body>
 </html>
