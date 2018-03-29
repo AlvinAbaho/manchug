@@ -7,8 +7,10 @@
     <title>{% block title %}{% endblock title %}</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab:300" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">#}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"/>
     <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}" media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
@@ -17,59 +19,24 @@
 </head>
 <body>
 <div class="navbar-fixed fixed_navbar">
-    <nav class="nav_bar">
+    <nav class="nav_bar blog_nav_bar">
         <div class="nav-wrapper #ffffff white row nav_wrapper">
-            <span class="col s6 m2 l2 ">
-                <a href="{% url 'home' %}" class="logo_img logo_column">
-                    <img class="logo_small" src="{% static 'img/logo_small.jpg' %}" alt="University Logo"/>
-                </a>
-            </span>
-            <span class="col s6 m10 l10">
-                <a href="#" data-activates="slide-out" class="button-collapse right">
-                    <i class="material-icons black-text darken-2 menu_icon light">menu</i>
-                </a>
-                <ul id="nav-mobile" class="right nav_active hide-on-med-and-down large_nav">
-                    <li class="nav_link {% if request.resolver_match.url_name == 'home' %}my_active{% endif %}">
-                        <a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a>
+            <div class="events_container">
+                <div class="col s6 m2 l2 ">
+                    <a href="{% url 'home' %}" class="logo_img logo_column">
+                        <img class="logo_small" src="{% static 'img/logo_small.jpg' %}" alt="University Logo"/>
+                    </a>
+                </div>
+                <ul id="nav-mobile" class="right nav_active large_nav hide-on-small-and-down">
+                    <li class="nav_link my_active">
+                        <a class="grey-text text-darken-4" href="#">Events Blog</a>
                     </li>
-                    &nbsp
-                    <li class="nav_link {% if request.resolver_match.url_name == 'about_us' %}my_active{% endif %}">
-                        <a class="grey-text text-darken-4" href="{% url 'about_us:about_us' %}">About Us</a>
-                    </li>
-                    &nbsp
-                    <li class="nav_link {% if request.resolver_match.url_name == 'committee' %}my_active{% endif %}">
-                        <a class="grey-text text-darken-4" href="{% url 'committee:committee' %}">Committee</a>
-                    </li>
-                    &nbsp
-                    <li class="nav_link {% if request.resolver_match.url_name == 'events' %}my_active{% endif %}">
-                        <a class="grey-text text-darken-4" href="{% url 'events:events' %}">Events</a>
-                    </li>
-                    &nbsp
-                    <li class="nav_link {% if request.resolver_match.url_name == 'membership' %}my_active{% endif %}">
-                        <a class="grey-text text-darken-4" href="{% url 'membership:membership' %}">Membership</a>
-                    </li>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 </ul>
-            </span>
+            </div>
         </div>
     </nav>
 </div>
-<ul class="side-nav z-depth-3 side_navigation" id="slide-out">
-    <li class="nav_link {% if request.resolver_match.url_name == 'home' %}my_active{% endif %}">
-        <a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a>
-    </li>
-    <li class="nav_link {% if request.resolver_match.url_name == 'about_us' %}my_active{% endif %}">
-        <a class="grey-text text-darken-4" href="{% url 'about_us:about_us' %}">About Us</a>
-    </li>
-    <li class="nav_link {% if request.resolver_match.url_name == 'committee' %}my_active{% endif %}">
-        <a class="grey-text text-darken-4" href="{% url 'committee:committee' %}">Committee</a>
-    </li>
-    <li class="nav_link {% if request.resolver_match.url_name == 'events' %}my_active{% endif %}">
-        <a class="grey-text text-darken-4" href="{% url 'events:events' %}">Events</a>
-    </li>
-    <li class="nav_link {% if request.resolver_match.url_name == 'membership' %}my_active{% endif %}">
-        <a class="grey-text text-darken-4" href="{% url 'membership:membership' %}">Membership</a>
-    </li>
-</ul>
 
 {% block content %}{% endblock content %}
 
@@ -112,7 +79,7 @@
                 <span class="flag_span ">
                     <img class="responsive-img ug_flag hide-on-med-and-down" src="{% static 'img/ug.png' %}">
                 </span>&nbsp&nbsp&nbsp&nbsp
-                <span class="grey-text copyright_text center_small">
+            <span class="grey-text copyright_text center_small">
                     Copyright © 2018 University of Manchester Alumni Association of Uganda. All Rights Reserved
                 </span>
         </div>
@@ -122,17 +89,8 @@
 {#<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>#}
 {#<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>#}
 <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 <script src="{% static 'js/materialize.js' %}"></script>
 
-<script>
-    $(document).ready(function () {
-        $('.tooltipped').tooltip({delay: 50});
-        $(".button-collapse").sideNav();
-        Materialize.updateTextFields();
-        $('.modal').modal();
-
-    });
-
-</script>
 </body>
 </html>

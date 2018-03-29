@@ -1,54 +1,74 @@
-{% extends "layout.html" %}
+{% extends "blog_layout.html" %}
 {% load static from staticfiles %}
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Event Detail | UMAAU{% endblock title %}</title>
+    <title>{% block title %}Event Blog | UMAAU{% endblock title %}</title>
 </head>
 <body>
 {% block content %}
     <main>
-        <div class="container">
-            <h3>This is a blog title</h3>
-            <a href="{% static 'img/event_one_wide.jpg' %}" data-fancybox="images" data-caption="Those people at this place">
-            <span class="blog_img">
+        <div class="row">
+            <div class="container">
+                <div class="col s12">
+                    <div class="section blog_title_section center-align">
+                        <h3 class="blog_title light">This is the title of this blog in particular</h3>
+                    </div>
+                    <div class="section center-align">
+                        <div class="divider blog_divider"></div>
+                    </div>
+                    <div class="member_paragraph center-align blog_post_date">Published on 29th-Mar-2018</div>
+                    <div class="section"></div>
+                    <div class="section"></div>
+                    <a href="{% static 'img/event_one_wide.jpg' %}" data-fancybox="images"
+                       data-caption="Those people at this place">
+                <span class="blog_img">
                 <img class=" responsive-img"
                      data-caption="This is event one picture"
                      src="{% static 'img/event_one_wide.jpg' %}"/>
-            </span>
-            </a>
-            <p class="black-text member_paragraph light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.<br><br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                </span>
+                    </a>
+                    <p class="black-text member_paragraph blog_paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat.<br><br>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
 
-            </p>
-            <a href="{% static 'img/event_two.jpg' %}" data-fancybox="images" data-caption="These People at that place">
+                    </p>
+                    <a href="{% static 'img/event_two.jpg' %}" data-fancybox="images"
+                       data-caption="These People at that place">
                 <span class="blog_img">
                     <img class=" responsive-img"
-                     data-caption="This is event one picture"
-                     src="{% static 'img/event_two.jpg' %}"/>
+                         data-caption="This is event one picture"
+                         src="{% static 'img/event_two.jpg' %}"/>
             </span>
-            </a>
-            <p class="black-text member_paragraph light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.<br><br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
-        </div>
+                    </a>
+                    <p class="black-text member_paragraph light blog_paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat.<br><br>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
         </div>
 
-{#     -------------- Other Images for the gallery-------#}
-        <a href="{% static 'img/event_three.jpg' %}" data-fancybox="images" data-caption="Those people at place Zee"></a>
+        {#     -------------- Other Images for the gallery-------#}
+        <a href="{% static 'img/event_three.jpg' %}" data-fancybox="images"
+           data-caption="Those people at place Zee"></a>
+        </div>
     </main>
 
 {% endblock %}

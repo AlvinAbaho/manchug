@@ -188,9 +188,34 @@ blockquote {
 
 /*------------------Events Blog ---------------------------*/
 .blog_img {
-    max-height: 24em;
+    max-height: 26em;
     display: block;
     overflow: hidden;
+}
+
+.blog_title {
+    font-size: 2.9rem !important;
+    letter-spacing: 0.07em;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold !important;
+}
+
+.blog_divider {
+    border: 4px solid #ffff00;
+    width: 35%;
+    margin: auto !important;
+}
+
+.blog_post_date{
+    font-family: 'Raleway', sans-serif !important;
+}
+.blog_paragraph{
+    font-family: 'Roboto Slab', serif;
+}
+
+.blog_title_section {
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 /*--------------- Contact Us Form ------------------------*/
@@ -253,11 +278,15 @@ blockquote {
     }
 
     .site_heading {
-        font-size: 4.2rem;
+        font-size: 64px;
     }
 
     .block_text_home {
         font-size: 2rem !important;
+    }
+
+    .blog_title {
+        font-size: 64px !important;;
     }
 }
 
@@ -270,7 +299,8 @@ blockquote {
         margin: auto !important;
         float: none !important;
     }
-    .container_center{
+
+    .container_center {
 
     }
 
@@ -281,10 +311,5 @@ blockquote {
     .logo_column {
         margin-left: -0.5em !important;
     }
-    /*.flag_span{*/
-        /*display: block !important;*/
-        /*margin: auto !important;*/
-        /*float: none !important;*/
-    /*}*/
 
 }
