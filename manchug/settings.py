@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import warnings
+from django.core.exceptions import ImproperlyConfigured
 
 
 def get_env_variable(var_name):
@@ -22,7 +24,7 @@ def get_env_variable(var_name):
         if DEBUG:
             warnings.warn(error_msg)
         else:
-            raise ImprorperlyConfigured(error_msg)
+            raise ImproperlyConfigured(error_msg)
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

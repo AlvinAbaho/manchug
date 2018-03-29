@@ -26,30 +26,31 @@
             <div class="row">
                 <div class="col s12 l4">
                     <div class="card hoverable">
-                        <div class="card-image card_img">
-                            <img class="responsive-img" src="{% static 'img/event_two.jpg' %}"/>
-                            <span class="card-title">Card Title</span>
+                        <div class="card-image black">
+                            <img class="responsive-img card_img" src="{% static 'img/event_two.jpg' %}"/>
+                            <span class="card-title">10th Equity and Merit Scholarships</span>
                         </div>
                         <div class="card-content">
-                            <p class=card_content>Morbi placerat imperdiet risus quis blandit.
-                                Ut lobortis elit luctus, feugiat erat vitae,
-                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.</p>
+                            <p class="card_content">The Equity and Merit scholarships from the University of Manchester
+                                aim to assist talented but
+                                economically disadvantaged students from some of world’s poorest countries...</p>
                         </div>
                         <div class="card-action">
-                            <a href="{% url 'events:events' %}" class="read_more">View more..</a>
+                            <a href="{% url 'events:event_one' %}" class="read_more" target="_blank">Read more..</a>
                         </div>
                     </div>
                 </div>
                 <div class="col s12 l4">
                     <div class="card hoverable">
-                        <div class="card-image card_img">
-                            <img class="" src="{% static 'img/event_two.jpg' %}"/>
+                        <div class="card-image black">
+                            <img class="card_img" src="{% static 'img/event_two.jpg' %}"/>
                             <span class="card-title card_title">Card Title</span>
                         </div>
                         <div class="card-content">
-                            <p class=card_content>Morbi placerat imperdiet risus quis blandit.
+                            <p class="card_content">Morbi placerat imperdiet risus quis blandit.
                                 Ut lobortis elit luctus, feugiat erat vitae,
-                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.</p>
+                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.
+                                ultricies nec eget tellus.</p>
                         </div>
                         <div class="card-action">
                             <a href="{% url 'events:events' %}" class="read_more">View more..</a>
@@ -58,14 +59,15 @@
                 </div>
                 <div class="col s12 l4">
                     <div class="card hoverable">
-                        <div class="card-image card_img">
-                            <img class="" src="{% static 'img/event_two.jpg' %}"/>
+                        <div class="card-image black">
+                            <img class="card_img" src="{% static 'img/event_two.jpg' %}"/>
                             <span class="card-title">Card Title</span>
                         </div>
                         <div class="card-content">
-                            <p class=card_content>Morbi placerat imperdiet risus quis blandit.
+                            <p class="card_content">Morbi placerat imperdiet risus quis blandit.
                                 Ut lobortis elit luctus, feugiat erat vitae,
-                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.</p>
+                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.ultricies
+                                nec eget tellus.</p>
                         </div>
                         <div class="card-action">
                             <a href="{% url 'events:events' %}" class="read_more">View more..</a>
@@ -113,7 +115,7 @@
                             <div class="col s12 m6 input-field input_field">
                                 <input type="text" placeholder="Last Name"
                                        class="validate" name="{{ form.last_name.html_name }}"
-                                required>
+                                       required>
                             </div>
                         </div>
                         <div class="row">
@@ -131,7 +133,9 @@
                                 <div class="section">
                                 <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
                                           type="text"
-                                          name="{{ form.suggestion.html_name }}" required>  </textarea>
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
                                 </div>
                             </div>
                         </div>

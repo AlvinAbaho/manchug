@@ -97,6 +97,10 @@ ul.footer_list li a:hover {
     font-size: 1.2em;
 }
 
+.card_img{
+    opacity: 0.5 !important;
+}
+
 .read_more {
     color: #6a1b9a !important;
 }
@@ -206,10 +210,11 @@ blockquote {
     margin: auto !important;
 }
 
-.blog_post_date{
+.blog_post_date {
     font-family: 'Raleway', sans-serif !important;
 }
-.blog_paragraph{
+
+.blog_paragraph {
     font-family: 'Roboto Slab', serif;
 }
 

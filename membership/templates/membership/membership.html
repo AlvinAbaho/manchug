@@ -17,30 +17,47 @@
     </div>
     <div class="row">
         <div class="container">
-            <div class="col s12 m6 center_small">
-                <h4 class="">Ordinary Member</h4>
+            <div class="col s12">
+                <h3 class="purple-text darken-2 center-align">Join us</h3>
+                <div class="card-panel events_card z-depth-0 light">
+                    <p class="member_paragraph">You are invited to become a member of UMAAU by paying your annual
+                        subscription fees. All members are required to demonstrate their support towards the objectives
+                        of this association. Annual subscription shall cover a calendar year running from January to
+                        December.<br><br>
+                        Among others, members have the following rights: .<br><br>
+                        (a) Eligible to attend all meetings and events organized by the association<br>
+                        (b) All members have a right to vote and every member is entitled to one vote<br>
+                        (c) There are two membership categories:
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col s12 m6 center_small center-align">
+                <h3 class="center-align purple-text darken-2">Ordinary Member</h3>
                 <p class="light member_paragraph">
-                    These are Alumni of the University of manchester or its former universities.
+                    These are Alumni of the University of manchester or its former universities. They pay an annual
+                    subscription-and-membership fee of fifty thousand uganda shillings.
                 </p>
-                <h5>Annual Subscription & Membership Fee</h5>
-                <p class="light member_paragraph">UGX: 50,000</p>
-                <div class="member_btn_div associate_btn">
+                <div class="member_btn_div center-align associate_btn">
                     <a href="#modal" class=" waves-effect waves-light black-text
-                        btn tooltipped modal-trigger  z-depth-0" data-position="bottom"
+                        btn tooltipped modal-trigger z-depth-0" data-position="bottom"
                        data-tooltip="Click to fill in contact form"
                        data-delay="50">
                         Contact Us
                     </a>
                 </div>
             </div>
-            <div class="col s12 m6 center_small">
-                <h4 class="">Associate Member</h4>
+            <div class="col s12 m6 center_small center-align">
+                <h3 class="center-align purple-text darken-2">Associate Member</h3>
                 <p class="light member_paragraph">
                     These do not meet the criterion of an ordinary member but desire to join the
-                    association.
+                    association. They pay an annual
+                    subscription-and-membership fee of a hundred thousand uganda shillings.
                 </p>
-                <h5>Annual Subscription & Membership Fee</h5>
-                <p class="light member_paragraph">UGX: 100,000</p>
                 <div class="member_btn_div associate_btn">
                     <a href="{% static 'docs/constitution.pdf' %}" target="_blank" class="
                        waves-effect waves-light black-text btn tooltipped z-depth-0"
@@ -70,7 +87,7 @@
                             <div class="col s12 m6 input-field input_field">
                                 <input type="text" placeholder="Last Name"
                                        class="validate" name="{{ form.last_name.html_name }}"
-                                required>
+                                       required>
                             </div>
                         </div>
                         <div class="row">
@@ -88,17 +105,19 @@
                                 <div class="section">
                                 <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
                                           type="text"
-                                          name="{{ form.suggestion.html_name }}" required>  </textarea>
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="waves-effect waves-light black-text yellow accent-2 btn right-align">
-                        <input type="submit" value="Submit" class="form_btn">
+                            <input type="submit" value="Submit" class="form_btn">
+                        </div>
+                    </form>
                 </div>
-                </form>
             </div>
         </div>
-    </div>
 
     </div>
 
