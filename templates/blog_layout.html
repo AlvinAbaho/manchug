@@ -27,10 +27,16 @@
                         <img class="logo_small" src="{% static 'img/logo_small.jpg' %}" alt="University Logo"/>
                     </a>
                 </div>
-                <ul id="nav-mobile" class="right nav_active large_nav hide-on-small-and-down">
+                <a href="#" data-activates="slide-out" class="button-collapse right">
+                    <i class="material-icons black-text darken-2 menu_icon light">menu</i>
+                </a>
+                <ul id="nav-mobile" class="right nav_active large_nav hide-on-med-and-down">
 
                     <li class="nav_link my_active">
-                        <a class="grey-text text-darken-4" href="#">UMAAU Events Blog</a>
+                        <a class="grey-text text-darken-4" href="{% url 'events:event_one' %}">UMAAU Events Blog</a>
+                    </li>&nbsp
+                    <li class="nav_link">
+                        <a class="grey-text text-darken-4" href="{% url 'events:events' %}">Events</a>
                     </li>
                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 </ul>
@@ -38,7 +44,14 @@
         </div>
     </nav>
 </div>
-
+<ul class="side-nav z-depth-3 side_navigation" id="slide-out">
+    <li class="nav_link my_active">
+        <a class="grey-text text-darken-4" href="{% url 'events:event_one' %}">UMAAU Events Blog</a>
+    </li>
+    <li class="nav_link">
+        <a class="grey-text text-darken-4" href="{% url 'events:events' %}">Events</a>
+    </li>
+</ul>
 {% block content %}{% endblock content %}
 
 <footer class="page-footer purple darken-3 ">
@@ -95,6 +108,7 @@
 <script>
     $(document).ready(function () {
         $('.tooltipped').tooltip({delay: 50});
+        $(".button-collapse").sideNav();
     });
 </script>
 </body>
