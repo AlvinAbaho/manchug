@@ -36,31 +36,31 @@
     </div>
     <div class="row">
         <div class="container">
-            <div class="col s12 m6 center_small center-align">
+            <div class="col s12 l6 center_small center-align">
                 <h3 class="center-align purple-text darken-2">Ordinary Member</h3>
                 <p class="light member_paragraph">
-                    These are Alumni of the University of manchester or its former universities. They pay an annual
-                    subscription-and-membership fee of fifty thousand uganda shillings.
+                    These are Alumni of the University of Manchester or its former Universities. They pay an annual
+                    subscription-and-membership fee of UGX 50,000.
                 </p>
                 <div class="member_btn_div center-align associate_btn">
                     <a href="#modal" class=" waves-effect waves-light black-text
-                        btn tooltipped modal-trigger z-depth-0" data-position="bottom"
+                        btn tooltipped modal-trigger z-depth-0 square_btn" data-position="bottom"
                        data-tooltip="Click to fill in contact form"
                        data-delay="50">
                         Contact Us
                     </a>
                 </div>
             </div>
-            <div class="col s12 m6 center_small center-align">
+            <div class="col s12 l6 center_small center-align">
                 <h3 class="center-align purple-text darken-2">Associate Member</h3>
                 <p class="light member_paragraph">
                     These do not meet the criterion of an ordinary member but desire to join the
-                    association. They pay an annual
-                    subscription-and-membership fee of a hundred thousand uganda shillings.
+                    association as members. They pay an annual subscription
+                    fee of UGX 100,000.
                 </p>
                 <div class="member_btn_div associate_btn">
                     <a href="{% static 'docs/constitution.pdf' %}" target="_blank" class="
-                       waves-effect waves-light black-text btn tooltipped z-depth-0"
+                       waves-effect waves-light black-text btn tooltipped z-depth-0 square_btn"
                        data-position="bottom" data-tooltip="Click to read the Constitution" data-delay="50">
                         Find out More
                     </a>
@@ -105,12 +105,14 @@
                                 <div class="section">
                                 <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
                                           type="text"
-                                          name="{{ form.suggestion.html_name }}" required>   </textarea>
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="waves-effect waves-light black-text yellow accent-2 btn right-align">
-                            <input type="submit" value="Submit" class="form_btn">
+                            <input type="submit" value="Submit" class="square_btn">
                         </div>
                     </form>
                 </div>

@@ -31,9 +31,9 @@ nav.nav_bar {
     background-color: #ffff00 !important;
 }
 
-.menu_icon {
-    font-size: 3em !important;
-}
+/*.menu_icon {*/
+    /*font-size: 3em !important;*/
+/*}*/
 
 .menu_icon:hover {
     color: #6a1b9a !important;
@@ -74,6 +74,7 @@ ul.footer_list li a:hover {
 /*--------------------- Home page styles -----------------    */
 .site_heading {
     font-size: 2.9rem;
+     text-transform: uppercase;
 }
 
 .site_banner {
@@ -154,6 +155,9 @@ blockquote {
     background-color: #ffffff !important;
     border: 1px solid #bdbdbd !important;
 }
+.square_btn{
+    border-radius: 0 !important;
+}
 
 /*--------------------- Events styles ----------------*/
 .events_banner {
@@ -188,7 +192,7 @@ blockquote {
 
 /*------------------Events Blog ---------------------------*/
 .blog_img {
-    max-height: 26em;
+    max-height: 30em;
     display: block;
     overflow: hidden;
 }
@@ -273,13 +277,16 @@ blockquote {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        padding-top: 16%;
-        padding-bottom: 9%;
+        padding-top: 8.5%;
+        padding-bottom: 8.5%;
         overflow: hidden;
     }
 
     .site_heading {
         font-size: 64px;
+        text-transform: uppercase;
+        line-height: 130% !important;
+        font-weight: 500;
     }
 
     .block_text_home {
@@ -301,16 +308,12 @@ blockquote {
         float: none !important;
     }
 
-    .container_center {
-
-    }
-
     .logo_small {
         height: 4em !important;
     }
 
     .logo_column {
-        margin-left: -0.5em !important;
+        margin-left: -1em !important;
     }
 
 }

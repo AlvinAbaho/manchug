@@ -11,10 +11,10 @@
 {% block content %}
     <div class="site_banner">
         <div class=" container">
-            <h1 class="center-align site_heading">University of Manchester Alumni Association in Uganda</h1>
+            <h1 class="center-align site_heading">University of Manchester Alumni Association <br>in Uganda</h1>
             <div class="center-align member_btn_div">
                 <a href="#modal"
-                   class="modal-trigger waves-effect waves-light black-text yellow accent-2 btn tooltipped z-depth-0"
+                   class="modal-trigger waves-effect waves-light black-text yellow accent-2 btn tooltipped z-depth-0 square_btn"
                    data-position="bottom" data-tooltip="Click to fill in Contact form" data-delay="50">
                     Contact Us
                 </a>
@@ -27,8 +27,8 @@
                 <div class="col s12 l4">
                     <div class="card hoverable">
                         <div class="card-image black">
-                            <img class="responsive-img card_img" src="{% static 'img/event_two.jpg' %}"/>
-                            <span class="card-title">2017 Equity and Merit Scholarships</span>
+                            <img class="responsive-img card_img" src="{% static 'img/event_one/merit_scholarships_5.jpg' %}"/>
+                            <span class="card-title">Celebrating the 2017 Equity and Merit Scholarships</span>
                         </div>
                         <div class="card-content">
                             <p class="card_content">The Equity and Merit scholarships from the University of Manchester
@@ -43,7 +43,7 @@
                 <div class="col s12 l4">
                     <div class="card hoverable">
                         <div class="card-image black">
-                            <img class="card_img" src="{% static 'img/event_two.jpg' %}"/>
+                            <img class="card_img" src="{% static 'img/event_one/merit_scholarships_4.jpg' %}"/>
                             <span class="card-title card_title">Card Title</span>
                         </div>
                         <div class="card-content">
@@ -60,7 +60,7 @@
                 <div class="col s12 l4">
                     <div class="card hoverable">
                         <div class="card-image black">
-                            <img class="card_img" src="{% static 'img/event_two.jpg' %}"/>
+                            <img class="card_img" src="{% static 'img/event_one/merit_scholarships_6.jpg' %}"/>
                             <span class="card-title">Card Title</span>
                         </div>
                         <div class="card-content">
@@ -89,7 +89,7 @@
                 </p>
                 <div class="center-align member_btn_div">
                     <a href="{% url 'membership:membership' %}"
-                       class=" waves-effect waves-light black-text yellow accent-2 btn tooltipped"
+                       class=" waves-effect waves-light black-text yellow accent-2 btn tooltipped square_btn"
                        data-position="bottom" data-tooltip="Click to find out how to become a Member" data-delay="50">
                         Become a Member
                     </a>
@@ -133,7 +133,9 @@
                                 <div class="section">
                                 <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
                                           type="text"
-                                          name="{{ form.suggestion.html_name }}" required>   </textarea>
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
                                 </div>
                             </div>
                         </div>
