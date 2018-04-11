@@ -192,7 +192,7 @@ blockquote {
 
 /*------------------Events Blog ---------------------------*/
 .blog_img {
-    max-height: 30em;
+    /*max-height: 30em;*/
     display: block;
     overflow: hidden;
 }
