@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>{% block title %}UMAAU{% endblock title %}</title>
 </head>
 <body>
@@ -133,7 +132,9 @@
                                 <div class="section">
                                 <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
                                           type="text"
-                                          name="{{ form.suggestion.html_name }}" required></textarea>
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
                                 </div>
                             </div>
                         </div>
