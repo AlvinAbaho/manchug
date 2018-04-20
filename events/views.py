@@ -11,3 +11,15 @@ class EventOneView(TemplateView):
 
 class EventTwoView(TemplateView):
     template_name = 'events/event_two.html'
+
+
+class EventThreeView(TemplateView):
+    template_name = 'events/event_two.html'
+
+
+class EventFourView(TemplateView):
+    template_name = 'events/event_two.html'
+
+
+class EventFiveView(TemplateView):
+    template_name = 'events/event_two.html'

@@ -26,8 +26,9 @@
                 <div class="col s12 l4">
                     <div class="card hoverable">
                         <div class="card-image black">
-                            <img class="responsive-img card_img" src="{% static 'img/event_one/merit_scholarships_5.jpg' %}"/>
-                            <span class="card-title">Celebrating the 2017 Equity and Merit Scholarships</span>
+                            <img class="responsive-img card_img"
+                                 src="{% static 'img/event_one/merit_scholarships_7.jpg' %}"/>
+                            <span class="card-title">Celebrating 10 Years of Equity and Merit Scholarships</span>
                         </div>
                         <div class="card-content">
                             <p class="card_content">The Equity and Merit scholarships from the University of Manchester
@@ -42,17 +43,16 @@
                 <div class="col s12 l4">
                     <div class="card hoverable">
                         <div class="card-image black">
-                            <img class="card_img" src="{% static 'img/event_one/merit_scholarships_4.jpg' %}"/>
-                            <span class="card-title card_title">Card Title</span>
+                            <img class="card_img" src="{% static 'img/event_two/initiatives_1.jpg' %}"/>
+                            <span class="card-title card_title">The University of Manchester Collaboration Initiatives</span>
                         </div>
                         <div class="card-content">
-                            <p class="card_content">Morbi placerat imperdiet risus quis blandit.
-                                Ut lobortis elit luctus, feugiat erat vitae,
-                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.
-                                ultricies nec eget tellus.</p>
+                            <p class="card_content">The University of Manchester supports developmental programs
+                                through collaborations with
+                                institutions in Uganda. Some of the activities conducted support collaboration...</p>
                         </div>
                         <div class="card-action">
-                            <a href="{% url 'events:events' %}" class="read_more">View more...</a>
+                            <a href="{% url 'events:event_two' %}" class="read_more" target="_blank">Read more...</a>
                         </div>
                     </div>
                 </div>
@@ -60,16 +60,16 @@
                     <div class="card hoverable">
                         <div class="card-image black">
                             <img class="card_img" src="{% static 'img/event_one/merit_scholarships_6.jpg' %}"/>
-                            <span class="card-title">Card Title</span>
+                            <span class="card-title">2017 Pre-Departure Students Briefing</span>
                         </div>
                         <div class="card-content">
-                            <p class="card_content">Morbi placerat imperdiet risus quis blandit.
-                                Ut lobortis elit luctus, feugiat erat vitae,
-                                interdum diam. Nam sit amet arcu vitae justo lacinia ultricies nec eget tellus.ultricies
-                                nec eget tellus.</p>
+                            <p class="card_content">Every year, some of the Alumni voluntarily meet new students before
+                                they leave for their studies
+                                at the University of Manchester. The 2017 event happened in September, just before
+                                students left...</p>
                         </div>
                         <div class="card-action">
-                            <a href="{% url 'events:events' %}" class="read_more">View more...</a>
+                            <a href="{% url 'events:event_three' %}" class="read_more" target="_blank">Read more...</a>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,9 @@
                                 <div class="section">
                                 <textarea placeholder="Message/Suggestion" id="textarea1" class="materialize-textarea"
                                           type="text"
-                                          name="{{ form.suggestion.html_name }}" required> </textarea>
+                                          name="{{ form.suggestion.html_name }}"
+                                          required>
+                                </textarea>
                                 </div>
                             </div>
                         </div>
@@ -146,11 +148,7 @@
 
     </div>
 {% endblock content %}
-<script>
-    $(document).ready(function () {
 
-    });
-</script>
 </body>
 
 

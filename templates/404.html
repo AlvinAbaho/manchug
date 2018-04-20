@@ -1,29 +1,35 @@
-{% extends "layout.html" %}
 {% load static from staticfiles %}
 
 <!DOCTYPE html>
-< lang="en">
+<html lang="en">
 <head>
+    <title>{% block title %}UMAAU | 404 Page not Found{% endblock title %}</title>
     <meta charset="UTF-8">
-    {% block title %}UMAAU | 404 Page not Found{% endblock title %}
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">#}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 </head>
 
 <body>
 {% block content %}
     <div class="row">
         <div class="section">
-            <div class="container">
-                <div class="card-panel center-align yellow accent-4 z-depth-4">
+            <div class="container section">
+                <div class="card-panel center-align yellow accent-3 z-depth-4  error_panel">
                     <h1 class="light">404 | Error</h1>
                     <h2 class="light">Page Not Found</h2>
-                    <h3 class="light member_paragraph">OOps. It looks like the page you are looking for
-                        does not exist.<br> You could click on any
-                        of the navigation links above to return to an existing page in the website
+                    <h3 class="light member_paragraph line_height">OOps. It looks like the page you are looking for
+                        does not exist.<br> Please <a href="{% url 'home' %}" class="read_more">click here</a> to return to our website's
+                        home page.
                     </h3>
                 </div>
             </div>
         </div>
-    </div>s
+    </div>
 {% endblock content %}
 </body>
 </html>

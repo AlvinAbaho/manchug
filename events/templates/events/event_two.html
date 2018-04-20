@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "blog_layout.html" %}
 {% load static from staticfiles %}
 
 
@@ -6,11 +6,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>{% block title %}Event Detail | UMAAU{% endblock title %}</title>
+    <title>{% block title %}Event Detail | UMAAU{% endblock title %}</title>
 </head>
 <body>
 {% block content %}
+    <main>
+        <div class="row">
+            <div class="container">
+                <div class="col s12">
+                    <div class="section blog_title_section center-align">
+                        <h3 class="blog_title light">The University of Manchester Collaboration Initiatives</h3>
+                    </div>
+                    <div class="section center-align">
+                        <div class="divider blog_divider"></div>
+                    </div>
+                    <div class="member_paragraph center-align blog_post_date">Published on 18th-Apr-2018</div>
+                    <div class="section"></div>
+                    <div class="section"></div>
+                    <a href="{% static 'img/event_two/initiatives_2.jpg' %}" data-fancybox="images"
+                       data-caption="The University of Manchester Collaboration Initiatives">
+                            <span class="hvrbox">
+                                <img class="responsive-img hvrbox-layer_bottom"
+                                     data-caption="The University of Manchester Collaboration Initiatives"
+                                     src="{% static 'img/event_two/initiatives_2.jpg' %}"/>
+                                <span class="hvrbox-layer_top">
+                                <span class="hvrbox-text">
+                                    <h4 class="light">Click on image for Slide-show</h4>
+                                </span>
+                                </span>
+                            </span>
+                    </a>
+                    <p class="black-text member_paragraph blog_paragraph">
+                        The University of Manchester supports developmental programs through collaborations with
+                        institutions in Uganda. <br><br> Some of the activities conducted support collaboration between
+                        the University and institutions of learning in Uganda. For example, between 20th to 23rd June
+                        2017, Professor Andrew Masters from the School of Chemical Engineering and Analytical Science at
+                        the University of Manchester visited Kyambogo University and Makerere University to discuss
+                        collaborations in areas of teaching, research, joint project developments, staff and students
+                        exchange programs, capacity building among others.
+                    </p>
+                    <a href="{% static 'img/event_two/initiatives_1.jpg' %}" data-fancybox="images"
+                       data-caption="The University of Manchester Collaboration Initiatives">
+                <span class="hvrbox">
+                    <img class=" responsive-img hvrbox-layer_bottom"
+                         data-caption="The University of Manchester Collaboration Initiatives"
+                         src="{% static 'img/event_two/initiatives_1.jpg' %}"/>
+                    <span class="hvrbox-layer_top">
+		            <span class="hvrbox-text">
+                        <h4 class="light">Click on image for Slide-show</h4>
+                    </span>
+	                </span>
+            </span>
+                    </a>
+                    <p class="black-text member_paragraph light blog_paragraph">
+                        The Global Development Institute (GDI) at the University also supports programs necessary for
+                        Uganda’s development. In 2016 and 2017, GDI conducted field trips to Uganda aimed at addressing
+                        global development challenges. For more information on GDI, visit
+                        https://www.gdi.manchester.ac.uk/.<br><br>
+                        The Alumni Association fully supports collaborations and development programs between the
+                        University and Institutions in Uganda.<br><br>
 
+                    </p>
+                </div>
+            </div>
+        </div>
+        {#    ----------------------------- Other Images -------------------------------------------#}
+        <a href="{% static 'img/event_two/initiatives_3.jpg' %}" data-fancybox="images"
+           data-caption="Celebrating 10 years of the University of
+                            Manchester Equity and Merit scholarships"></a>
+         <a href="{% static 'img/event_two/initiatives_4.jpg' %}" data-fancybox="images"
+           data-caption="Celebrating 10 years of the University of
+                            Manchester Equity and Merit scholarships"></a>
+    </main>
 {% endblock %}
 </body>
 </html>

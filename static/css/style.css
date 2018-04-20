@@ -191,11 +191,6 @@ blockquote {
 }
 
 /*------------------Events Blog ---------------------------*/
-.blog_img {
-    /*max-height: 30em;*/
-    display: block;
-    overflow: hidden;
-}
 
 .blog_title {
     font-size: 2.9rem !important;
@@ -316,4 +311,15 @@ blockquote {
         margin-left: -1em !important;
     }
 
+}
+
+/*---------------------------- Error --------------------------------*/
+
+/*.line_height{*/
+    /*line-height: 4em !important;*/
+/*}*/
+.error_panel{
+    margin: auto !important;
+    height: 80%;
+    width: auto;
 }
