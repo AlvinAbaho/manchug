@@ -1,10 +1,37 @@
+{% extends "blog_layout.html" %}
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}Event Blog | UMAAU{% endblock title %}</title>
 </head>
 <body>
-
+{% block content %}
+    <main>
+        <div class="row">
+            <div class="container">
+                <div class="col s12">
+                    <div class="section blog_title_section center-align">
+                        <h3 class="blog_title light">UMAAU Get-Together; <br>May 19, 2018</h3>
+                    </div>
+                    <div class="section center-align">
+                        <div class="divider blog_divider"></div>
+                    </div>
+                    <div class="member_paragraph center-align blog_post_date">Published on 23rd-Apr-2018</div>
+                    <div class="section"></div>
+                    <div class="section"></div>
+                    <p class="black-text member_paragraph blog_paragraph">
+                        This meet-and-greet event will be held in Kampala at a venue to be communicated on May 19, 2018.<br><br>
+                        The event is meant to bring together members and others who are yet to commit to membership to
+                        meet the Interim committee, ask questions and discuss ideas on how we can collectively move
+                        forward.<br><br> At this event, the date and agenda for the General Assembly will be set. <br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
 </body>
 </html>

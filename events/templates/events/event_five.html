@@ -1,10 +1,47 @@
+{% extends "blog_layout.html" %}
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}Event Blog | UMAAU{% endblock title %}</title>
 </head>
 <body>
-
+{% block content %}
+    <main>
+        <div class="row">
+            <div class="container">
+                <div class="col s12">
+                    <div class="section blog_title_section center-align">
+                        <h3 class="blog_title light">UMAAU Annual General Assembly</h3>
+                    </div>
+                    <div class="section center-align">
+                        <div class="divider blog_divider"></div>
+                    </div>
+                    <div class="member_paragraph center-align blog_post_date">Published on 23rd-Apr-2018</div>
+                    <div class="section"></div>
+                    <div class="section"></div>
+                    <p class="black-text member_paragraph blog_paragraph">
+                        The Executive Committee is mandated to call a General Assembly annually. Among others, the GA
+                        shall be attended by all subscribing members as voting delegates. This is an important event
+                        that makes a significant contribution to the proper management of the association. Among others,
+                        the following decisions may be made:<br><br>
+                        (a) Reviewing and setting subscription fees of members.<br>
+                        (b) Considering and approving proposals for short-term and long-term development plans and the
+                        strategies for implementation.<br>
+                        (c) Considering and approving the proposed budget of the association.<br>
+                        (d) Voting for a new executive committee after their term of two years.<br><br>
+                        Since the current committee is interim, the next GA will be used to elect a substantive
+                        committee to run the association for the next two-year term. Details of nominations and other
+                        information will be provided during the get-together event. The committee proposes that the GA
+                        should be held in July 2018.
+                        <br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
 </body>
 </html>
