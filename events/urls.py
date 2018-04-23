@@ -11,4 +11,5 @@ urlpatterns = [
     re_path(r'^event_two/$', views.EventTwoView.as_view(), name='event_two'),
     re_path(r'^event_three/$', views.EventThreeView.as_view(), name='event_three'),
     re_path(r'^event_four/$', views.EventFourView.as_view(), name='event_four'),
+    re_path(r'^event_five/$', views.EventFiveView.as_view(), name='event_five'),
 ]
