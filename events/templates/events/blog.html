@@ -1,0 +1,41 @@
+{% extends "blog_layout.html" %}
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <div class="row">
+        <div class="container">
+            <div class="col s12">
+                <div class="section blog_title_section center-align">
+                    <h3 class="blog_title light">Celebrating 10 Years of Equity and Merit Scholarships</h3>
+                </div>
+                <div class="section center-align">
+                    <div class="divider blog_divider"></div>
+                </div>
+                <div class="member_paragraph center-align blog_post_date">Published on 29th-Mar-2018</div>
+                <div class="section"></div>
+                <div class="section"></div>
+                <img class="responsive-img hvrbox-layer_bottom" data-caption="Celebrating 10 years of the University of
+                            Manchester Equity and Merit scholarships"
+                src="{% static 'img/event_one/merit_scholarships_1.jpg' %}"/>
+                <p class="black-text member_paragraph blog_paragraph">
+                        The Equity and Merit (E&M) scholarships from the University of Manchester aim to assist talented
+                        but economically disadvantaged students from some of the world’s poorest countries.
+                        Since the program began in 2007, a total of 206 scholarships have been awarded to exceptional
+                        individuals who have demonstrated both academic excellence and a commitment to the
+                        economic/social development of their home communities.
+                    </p>
+                <a href="{% url 'events:event_one' %}" class="read_more">Read more...</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+</body>
+</html>
