@@ -5,7 +5,7 @@ from django.views.generic.edit import FormView
 
 
 class HomePageView(FormView):
-    template_name = 'index.html'
+    template_name = 'home.html'
     form_class = ContactForm
     success_url = '/'
 
@@ -16,4 +16,4 @@ class HomePageView(FormView):
 
 
 # class HomePageView(TemplateView):
-#     template_name = 'index.html'
+#     template_name = 'home.html'
