@@ -1,6 +1,6 @@
-#University of Manchester Alumni Association in Uganda
+# University of Manchester Alumni Association in Uganda
 
-##Installation
+## Installation
 - Clone the repository
 - Create a virtual environment for the site 
 - Install all project dependencies using:
