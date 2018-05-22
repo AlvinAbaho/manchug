@@ -33,7 +33,7 @@ class ContactForm(forms.Form):
 
     def send_email(self):
         # mail_subject = 'MESSAGE FROM UMAAU WEBSITE: {}'.format(self.cleaned_data['subject'])
-        mail_subject = 'MESSAGE FROM UMAAU WEBSITE'
+        mail_subject = 'MESSAGE FROM UNIVERSITY OF MANCHESTER UGANDA ALUMNI WEBSITE'
         message = render_to_string('membership/email.html', {
             'first_name': self.cleaned_data['first_name'],
             'last_name': self.cleaned_data['last_name'],
@@ -42,7 +42,8 @@ class ContactForm(forms.Form):
         })
 
         email = EmailMessage(mail_subject, message, from_email='arms143mro@gmail.com',
-                             to=['edwin.mugume@gmail.com'])
+                             # to=['edwin.mugume@gmail.com'])
+                             to=['abahoalvin@gmail.com'])
 
         print("EMAIL MESSAGE: \n", email)
 
