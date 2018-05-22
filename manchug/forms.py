@@ -42,7 +42,7 @@ class ContactForm(forms.Form):
         })
 
         email = EmailMessage(mail_subject, message, from_email='arms143mro@gmail.com',
-                             to=['abahoalvin@gmail.com'])
+                             to=['edwin.mugume@gmail.com'])
 
         print("EMAIL MESSAGE: \n", email)
 
