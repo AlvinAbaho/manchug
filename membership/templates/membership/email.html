@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
 {% autoescape off %}
     Dear UMAAU Administrator,
 
     You have received a message from {{ first_name }} {{ last_name }} ( {{ mail }} )
 
-    <strong>MESSAGE:</strong>
+    MESSAGE:
 
     {{ msg }}
-
 
 
     Reply: {{ mail }}
 
 {% endautoescape %}
-</body>
